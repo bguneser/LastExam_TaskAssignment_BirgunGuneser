@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <EditText
+        android:id="@+id/et_employeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="İsim"/>
+
+
+
+    <EditText
+        android:id="@+id/et_employeeSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_employeeName"
+        android:hint="Soyisim"/>
+
+    <EditText
+        android:id="@+id/et_employeeTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_employeeSurname"
+
+        android:hint="İs tanımı"/>
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="Select begining date"
+        android:textColor="@color/white"
+        android:layout_below="@+id/et_employeeTask"/>
+
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDate"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
+        />
+
+
+    <Button
+        android:id="@+id/btnExpDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="Select Expire date"
+        android:textColor="@color/white"
+        android:layout_below="@+id/tvSelectDate"/>
+
+    <TextView
+        android:id="@+id/tvExpSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
+        android:layout_below="@+id/btnExpDate"
+        />
+
+    <Button
+        android:id="@+id/btn_employeekayıt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Kaydet"
+        android:layout_below="@+id/tvExpSelectDate"
+        android:onClick="postEmployeeToWebService"
+        />
+</RelativeLayout>
